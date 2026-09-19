@@ -1,0 +1,8 @@
+absence_claim,query_string,records_returned,records_screened
+Gap 1: tool validation on compressed models,"(""CodeCarbon"" OR ""RAPL"" OR ""software energy estimator"") AND (""quantization"" OR ""pruning"") AND (""power meter"" OR ""external meter"" OR ""ground truth"")",69,15
+Gap 2: nominal vs. realized compression,"(""pruning"" OR ""quantization"") AND (""sparse kernel"" OR ""dequantization"" OR ""inference backend"") AND ""energy consumption"" AND ""inference""",250,15
+Gap 3: cross-platform ranking,"(""model compression"" OR ""quantization"" OR ""pruning"") AND ""energy"" AND (""cross-platform"" OR ""multiple hardware platforms"" OR ""heterogeneous hardware"") AND (""ranking"" OR ""rank order"")",528,15
+Gap 4: on-device (PMIC) validation,"(""PMIC"" OR ""power management integrated circuit"" OR ""fuel gauge"") AND ""smartphone"" AND (""external power meter"" OR ""validation"") AND (""deep learning"" OR ""neural network"")",44,15
+Gap 5: battery state and compression,"(""battery state of charge"" OR ""battery discharge"") AND (""quantization"" OR ""pruning"" OR ""model compression"") AND (""inference"" OR ""energy consumption"")",284,15
+Gap 6: thermal behavior and compression,"""thermal throttling"" AND (""quantization"" OR ""pruning"" OR ""model compression"") AND ""energy""",168,15
+Section 4.5: accuracy-energy Pareto frontier,"(""Pareto front"" OR ""Pareto frontier"") AND (""quantization"" OR ""pruning"") AND (""measured energy"" OR ""energy consumption"") AND ""accuracy""",639,15

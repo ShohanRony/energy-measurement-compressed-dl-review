@@ -1,0 +1,22 @@
+study,hardware,models,compression_states,instrument,idle_baseline,batch_size_stated,dispersion,phase
+Alizadeh & Castor (2024),"Laptop: Intel Core i7-11850H, RTX 3070","ResNet, MobileNet, BERT-base",None (runtime comparison),"pyRAPL (CPU); nvidia-smi, 10 ms (GPU)",Subtracted,Y,N,Inference
+Bartoli et al. (2025),STM32N6570-DK,TinyML models,None,"50 mOhm shunt, Tektronix MSO64B","Separate phase, excluded",N,Y,Inference
+Caravaca et al. (2025),21 GPU configurations (cloud),155 LLMs,INT4 (AWQ GPTQ) and FP8 variants,CodeCarbon (NVML),N,Y,N,Inference
+Chang et al. (2026),"Google Pixel 9 (CPU, GPU, TPU)",ResNet50V2,FP32/INT8; five pruning variants,PMIC rails,N,N,Y,Inference
+Chung et al. (2026),"NVIDIA H100, B200",46 generative models,BF16 vs. native FP8,Zeus,N,Y,N,Inference
+Dos Santos Ferreira et al. (2026),"Five Intel/AMD machines, three with GPUs",CNNs and language models,None (hyperparameter search),CodeCarbon,N,Y,Y,Training and inference
+Fadel Argerich & Patino-Martinez (2024),"Intel Core i9-9900K, RTX 4090",Multiple LLMs,Weight quantization,"Own tool (CPU, memory, GPU, storage)",N,Y,N,Inference
+Fanariotis et al. (2025),Alif Ensemble E7 (MCU + NPU),Six models,None (CPU vs. NPU),"Keysight 34465A DMM, GPIO-triggered",Subtracted,N,N,Inference
+Fischer (2026),Single CPU/GPU platform,Vision and language models,None,Smart socket; energy meter vs. CodeCarbon,N,Y,Y,Inference
+Husom et al. (2025),Raspberry Pi 4 (Pi 5 supplementary),28 Ollama LLMs,Weight-only PTQ levels,Joulescope JS110; USB meter on Pi 5,Subtracted,N,Y,Inference
+Lahmer et al. (2022),"Jetson TX2, Xavier NX",Synthetic conv/FC layers,None,"Onboard sensors, 0.1 ms slots",N,N,N,Inference (CPU)
+Mei & Stamp (2025),Kaggle cloud,Nine pretrained models,"Pruning, low-rank, capacity reduction","Software estimate (CPU, GPU, RAM)",N,N,N,Training
+Paula et al. (2025),NVIDIA T4 (listed),"BERT, DistilBERT, ALBERT, ELECTRA","Pruning, distillation, PTQ, combinations",CodeCarbon,N,Y (fine-tuning),N,Not separated
+Rajput & Sharma (2024),Not located,One LLM,Five 4-bit PTQ methods,CodeCarbon,N,Y,N,Inference
+Sierra-Herrera et al. (2026),"x86 desktop and laptop, Apple M4, Raspberry Pi 5, cloud","CNN, RNN, LSTM, XGBoost",None,P4400 wall meter; nvidia-smi,N,Y,Y,Training
+Tu et al. (2023),Smartphones (e.g. Huawei P40 Lite),MobileNetV2 and other DNNs,FP32 vs. INT8,Monsoon power monitor,N,N,N,Inference
+Tummalapalli et al. (2026),"Raspberry Pi 5 + Hailo-10H, Galaxy S24 Ultra, iPhone 16 Pro, RTX 4050 laptop",One 4-bit LLM,Q4_0,INA219 at 1 kHz; nvidia-smi; fuel gauge,"Reported, not subtracted",N,Y,Inference
+Xiang (2026),Raspberry Pi 4,"ImageNet, CIFAR-10, Speech Commands models","Structured compression, distillation, mixed precision",FNIRSI FNB48 USB meter (100 Hz, calibrated),N,Y,Y,Inference
+Xu et al. (2023),Four Jetson Nano,Vision transformers,Decomposition with distillation,Monsoon HVPM,N,N,N,Inference
+Zou et al. (2026),"Phone, laptop, development board",Quantized LLMs,4-bit,In-house ADC power monitor,Subtracted,N,N,Inference
+Giedra et al. (2026),Jetson Orin Nano Super,Twelve LLMs (<1B to 8B),Quantized GGUF deployments,tegrastats + external DMM,"Recorded, not subtracted",N,Y,Inference

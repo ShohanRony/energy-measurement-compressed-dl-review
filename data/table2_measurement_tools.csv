@@ -1,0 +1,16 @@
+tool_or_method,mechanism,reported_error_accuracy_or_overhead,reference_used,platform_support,source
+ML Emissions Calculator,Static (TDP x time),"-40% to +40%; -124 W to +195 W",Smart socket and consumer energy meter,Any (assumed TDP),Fischer (2026)
+CodeCarbon,"Dynamic (RAPL, NVML)","Underestimated power by 15-25% (46-90 W); underestimated energy vs. OpenZmeter; time overhead up to 46.75% at 1 kHz","Smart socket and energy meter; OpenZmeter; uninstrumented runtime","Intel/AMD CPUs, NVIDIA GPUs","Fischer (2026); Aquino-Britez et al. (2025); Diamond & Stoico (2026)"
+CarbonTracker,Dynamic,Substantially higher energy values than hardware meter,OpenZmeter,NVIDIA GPUs (as tested),Aquino-Britez et al. (2025)
+Scaphandre,Dynamic (RAPL),Time overhead up to 17.6% at 1 kHz,Uninstrumented runtime,RAPL-capable CPUs,Diamond & Stoico (2026)
+Intel RAPL,On-chip counter,<2% on Haswell (cited from prior work, not re-tested),Prior external validation,"Intel (package, core, uncore, DRAM); AMD Zen (package, core only)",Fadel Argerich & Patino-Martinez (2024); Raffin & Trystram (2024)
+nvidia-smi / NVML,On-board counter,~5% (cited from prior work, not re-tested),Prior study,NVIDIA GPUs only,Sardi et al. (2026)
+Jetson onboard power sensors,On-board counter,Underestimate up to 50%; +/-3% after per-device calibration,PicoScope 2204A oscilloscope (100 MS/s),NVIDIA Jetson,Shalavi et al. (2023)
+Pixel 9 PMIC rail profiler,"PMIC accumulator (125 Hz, read every 16 ms)",MAPE 4.33-8.14%; profiling overhead 2.72%,Direct integration of the same trace (internal),Google Pixel 9,Chang et al. (2026)
+CodeGreen,"Checkpointed polling (RAPL, NVML, ROCm)",R^2 = 0.9934 vs. RAPL; overhead 9.1-9.6% (C/C++, coarse),RAPL,"Intel/AMD CPUs; NVIDIA/AMD GPUs",Rajput & Sharma (2026)
+WattLayer,Learned layer-wise model,MAPE 40.1% (93 held-out image models),"CodeCarbon (RAPL, nvidia-smi)",NVIDIA GPUs,Sardi et al. (2026)
+Random-forest energy model,Learned model,MAPE 8.03% (cross-validation),CodeCarbon (NVML),NVIDIA GPUs (21 configurations),Caravaca et al. (2025)
+Joulescope JS110,External DC meter,2 MHz sampling; +/-3 A continuous limit,--,DC-powered edge devices,Husom et al. (2025)
+P4400 consumer meter,External AC meter,Accuracy 0.2-2% (specified),--,AC-powered systems,Sierra-Herrera et al. (2026)
+SPEC-certified analyzer (e.g. Yokogawa WT310),External AC analyzer,Larger error bars below 75 W (crest factor),--,AC-powered systems,Tschand et al. (2024)
+Shunt + oscilloscope; GPIO-synchronized DMM,"External, phase-triggered","50 mOhm shunt, +/-1% tolerance (Tektronix MSO64B); Keysight 34465A DMM",--,Microcontrollers,Bartoli et al. (2025); Fanariotis et al. (2025)
