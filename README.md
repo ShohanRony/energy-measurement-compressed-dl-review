@@ -1,6 +1,8 @@
 # Energy Measurement of Compressed Deep Learning Models: A Literature Review
 
-Shohinur Pervez Shohan, September 2026. [paper.pdf](paper.pdf)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22842954.svg)](https://doi.org/10.5281/zenodo.22842954)
+
+Shohinur Pervez Shohan, September 2026. [paper.pdf](paper.pdf) · [Zenodo record (DOI)](https://doi.org/10.5281/zenodo.22842954)
 
 A narrative literature review (not an original-measurement study) examining how the
 energy of compressed deep learning models is measured, and whether model compression
